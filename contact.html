@@ -15,33 +15,6 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"/>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      AOS.init();
-      
-      emailjs.init('33iNHYtZIuhHtuJ1i'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
-
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Collect form data
-        const formData = new FormData(event.target);
-        const formObject = Object.fromEntries(formData.entries());
-
-        // Send form data using EmailJS
-        emailjs.send('service_s4732w5', 'template_8l8qh6u', formObject)
-          .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            window.location.href = 'success.html'; // Redirect to thank-you page
-          }, function(error) {
-            console.log('FAILED...', error);
-            alert('Failed to send message. Please try again.');
-          });
-      });
-    });
-  </script>
 </head>
 <body>
   <script src="js/preloader.min.js" charset="utf-8"></script>
@@ -83,8 +56,8 @@
         <div class="row h-100 align-items-center">
           <div class="col-12 col-md-9 col-lg-10 pt-5">
             <div class="sub-content-text" data-aos="fade-up" data-aos-delay="800">
-              <h1 style="font-family: 'Lora', serif;">"You are my everything"</h1>
-              <h2>TAYLOR SWIFT</h2>
+              <h1 style="font-family: 'Lora', serif;">"Contact Successful"</h1>
+              <h2>You will receive an email shortly. Please check constantly</h2>
             </div>
           </div>
         </div>
@@ -98,90 +71,13 @@
     </a>
   </div>
 
-  <!-- Contacts 8 -->
-  <section class="section contact-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center">
-          <span class="h6 text-color">Get In Touch</span>
-          <h2 class="mt-3 content-title">Contact me NOW</h2>
-        </div>
-      </div>
-    </div>
-
-    <!-- Border -->
-    <div class="container bg-r mt-5">
-      <div class="row d-flex mb-5 contact-info justify-content-center">
-        <div class="col-md-7">
-          <h2 id="quote" class="text-center mb-5"></h2>
-          <form id="contactForm" data-aos="fade-up" data-aos-delay="300">
-            <div class="row">
-              <div class="col">
-                <input type="text" name="first_name" class="form-control" required placeholder="First name">
-              </div>
-              <div class="col">
-                <input type="text" name="last_name" class="form-control" required placeholder="Last name">
-              </div>
-            </div>
-
-            <div class="row mt-4">
-              <div class="col">
-                <input type="text" name="country" class="form-control" required placeholder="Country">
-              </div>
-            </div>
-
-            <div class="row mt-4">
-              <div class="col">
-                <input type="email" name="email" class="form-control" required placeholder="Email">
-              </div>
-            </div>
-
-            <div class="row mt-4">
-              <div class="col">
-                <input type="text" name="phone" class="form-control" required placeholder="Phone Number">
-              </div>
-              <div class="col">
-                <select name="experience_package" class="form-control" required>
-                  <option value="">Select experience package</option>
-                  <option value="Private Chat">Private Chat</option>
-                  <option value="Upcoming meet and greet">Upcoming meet and greet</option>
-                  <option value="Signed Merchandise">Signed Merchandise</option>
-                  <option value="Donation">Donation</option>
-                  <option value="Backstage Pass">Backstage Pass</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="row mt-4">
-              <div class="col">
-                <input type="text" name="location" class="form-control" required placeholder="Location">
-              </div>
-            </div>
-            
-            <div class="row mt-4">
-              <div class="col">
-                <textarea class="form-control" name="message" rows="5" required placeholder="Say how you feel about me"></textarea>
-              </div>
-            </div>
-
-            <div class="row mt-4">
-              <div class="col text-center">
-                <button type="submit" class="btn jc-btn dark">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- cta section -->
   <section class="section services-section img" data-parallax="scroll" data-image-src="imgs/1.jpg" data-natural-width="3000" data-natural-height="2000" data-position-y="top">
     <div class="overlay-shadow"></div>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 text-center" data-aos="fade-up" data-aos-delay="300">
-          <h1 class="content-title text-white">Taylor Swift</br> World's NO.1 Artist</h1>
+          <h1 class="content-title text-white">If you do not receive a responce email within a few minutes, please check your SPAM or JUNK mail folder.</h1>
         </div>
       </div>
     </div>
